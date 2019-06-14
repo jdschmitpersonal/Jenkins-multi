@@ -1,6 +1,6 @@
 #!/usr/bin/groovy
 @Library('PipelineShared')_
 stage("one") {
-    sharedfile1
+    sharedfile
     sharedifle2
 }
