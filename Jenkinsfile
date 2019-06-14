@@ -1,6 +1,8 @@
 @Library('PipelineShared')_
-stage("one") {
-    steps{
-        com.personal.sharedfile "John"
+stages{
+    stage("one") {
+        steps{
+            com.personal.sharedfile "John"
+        }
     }
 }
