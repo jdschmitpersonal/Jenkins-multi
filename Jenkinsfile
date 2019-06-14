@@ -1,5 +1,6 @@
 #!/usr/bin/groovy
 @library('PipelineShared') _
+PipelineShared.echojob()
 pipeline{
     agent any
         stages {
