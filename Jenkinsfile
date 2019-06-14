@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-@library('PipelineShared')_
+@Library('PipelineShared')_
 pipeline{
     agent any
         stages {
