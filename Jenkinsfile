@@ -1,5 +1,6 @@
-#!/usr/bin/groovy
 @Library('PipelineShared')_
 stage("one") {
-    com.personal.sharedfile John
+    steps{
+        com.personal.sharedfile "John"
+    }
 }
