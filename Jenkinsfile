@@ -2,6 +2,7 @@
 
 node('master'){
     stage("one") {
-        com.personal.sharedfile.call() 'john'
+        def share = new com.personal.sharedfile.call()
+        share 'john'
     }
 }
