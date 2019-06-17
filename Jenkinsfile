@@ -1,8 +1,8 @@
 @Library('PipelineShared')_
-import com.personal.sharedfile
+import com.personal.Shared
 node('master'){
     stage("one") {
-        def field = new sharedfile()
-        field.call() John
+        def field = new Shared()
+        field.sharedfile()
     }
 }
