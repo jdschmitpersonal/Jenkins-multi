@@ -2,8 +2,6 @@
 
 node('master'){
     stage("one") {
-        steps{
-            com.personal.sharedfile.call() 'john'
-        }
+        com.personal.sharedfile.call() 'john'
     }
 }
