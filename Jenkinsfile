@@ -1,6 +1,6 @@
 @Library('PipelineShared')_
 
-stages{
+node('master'){
     stage("one") {
         steps{
             com.personal.sharedfile.call() 'john'
