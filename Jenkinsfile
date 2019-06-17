@@ -1,9 +1,9 @@
 @Library('PipelineShared')_
-def shared = new com.personal.sharedfile()
+
 stages{
     stage("one") {
         steps{
-            shared 'john'
+            com.personal.sharedfile.call() 'john'
         }
     }
 }
