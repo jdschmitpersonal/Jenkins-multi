@@ -14,6 +14,7 @@ node('master'){
         stage(stages[i]) {
             count = count + 1
               timeout(time: 1, unit: 'HOURS') {
+                    input 'Deploy to: ' + stages[0] + '?'
                }
                 echo 'Current stage' + count
         }
