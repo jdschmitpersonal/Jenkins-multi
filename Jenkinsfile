@@ -11,13 +11,13 @@ node('master'){
     */
     def datas = readYaml file: './testyml.yml'
     println(datas)
-    return
+    def stages = datas['test']['var1']
     def count = 1
-    for(i = 0 ; i < datas.test.var1.length ; i++){
-        stage(datas.test.var1[i]) {
+    for(i = 0 ; i < stages.length ; i++){
+        stage(stages[i]) {
             count = count + 1
               timeout(time: 1, unit: 'HOURS') {
-                    input 'Deploy to: ' + datas.test.var1[0] + '?'
+                    input 'Deploy to: ' + stages[i] + '?'
                }
                 echo 'Current stage' + count
         }
