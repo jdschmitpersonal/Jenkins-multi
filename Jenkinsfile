@@ -1,6 +1,14 @@
 @Library('PipelineShared') _
+
+def props = getPropertyList('1.0.0', true)
+def stages = props.get('var1').split(',')
 node('master'){
-    stage("one") {
-        Shared John
+    def count = 1
+    for(i = 0 ; i < stages.length ; i++){
+        stage(stages[i]) {
+            echo 'Current stage' + count
+            count = count + 1
+        }
     }
+
 }
