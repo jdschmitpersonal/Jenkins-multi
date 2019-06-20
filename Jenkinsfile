@@ -12,6 +12,8 @@ node('master'){
     def datas = readYaml file: './testyml.yml'
     println(datas)
     def stages = datas['test']['var1']
+    println(stages)
+    return
     def count = 1
     for(i = 0 ; i < stages.length ; i++){
         stage(stages[i]) {
