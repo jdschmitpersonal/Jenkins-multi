@@ -9,7 +9,9 @@ node('master'){
     def props = propFile.getPropertyList('1.0.0', true)
     def stages = props.get('var1').split(',')
     */
-    def String[] datas = readYaml file: './testyml.yml'
+    def datas = readYaml file: './testyml.yml'
+    println(datas)
+    return
     def count = 1
     for(i = 0 ; i < datas.test.var1.length ; i++){
         stage(datas.test.var1[i]) {
