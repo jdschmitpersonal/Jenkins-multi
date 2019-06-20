@@ -1,4 +1,8 @@
 node('master'){
+    
+    
+    checkout scm
+
     def rootDir = pwd()
     def propFile = load("./PropertyList.groovy")
     
