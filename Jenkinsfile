@@ -12,16 +12,10 @@ node('master'){
     def count = 1
     for(i = 0 ; i < stages.length ; i++){
         stage(stages[i]) {
+            count = count + 1
               timeout(time: 1, unit: 'HOURS') {
-                   def exitDeploy = input 'Deploy to: ' + stages[0] + '?'
                }
-            if(exitDeploy){
                 echo 'Current stage' + count
-                count = count + 1
-            } else {
-                return
-            }
-
         }
     }
 
