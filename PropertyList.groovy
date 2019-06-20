@@ -5,7 +5,7 @@ def getPropertyList(String version, boolean snapshots) {
   
   return[
     "var1" : "serv1, serv2, serv3, serv4, serv5",
-    "var2" : "http://someurl.com/" + repo + "/" + version + snapshots"
+    "var2" : "http://someurl.com/" + repo + "/" + version + snapshots
   ]
 
 }
