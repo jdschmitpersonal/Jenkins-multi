@@ -15,7 +15,7 @@ node('master'){
               timeout(time: 1, unit: 'HOURS') {
                    def exitDeploy = input 'Deploy to: ' + stages[0] + '?'
                }
-            if(!exitDeploy){
+            if(exitDeploy){
                 echo 'Current stage' + count
                 count = count + 1
             } else {
