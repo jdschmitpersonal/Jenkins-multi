@@ -1,6 +1,8 @@
 node('master'){
+    def rootDir = pwd()
+    def propFile = load("${rootDir}/vars/PropertyList.groovy")
     
-    def props = getPropertyList('1.0.0', true)
+    def props = propFile.getPropertyList('1.0.0', true)
     def stages = props.get('var1').split(',')
     
     def count = 1
