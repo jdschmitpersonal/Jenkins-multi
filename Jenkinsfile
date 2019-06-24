@@ -1,4 +1,4 @@
-node('master'){
+node('deb'){
     
     
     checkout scm
