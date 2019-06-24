@@ -1,4 +1,4 @@
-node('deb'){
+node('cent'){
     
     
     checkout scm
