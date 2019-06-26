@@ -1,4 +1,4 @@
-node('Master'){
+node('master'){
     
     
     checkout scm
