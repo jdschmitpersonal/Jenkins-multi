@@ -1,4 +1,4 @@
-node('cent'){
+node('Master'){
     
     
     checkout scm
